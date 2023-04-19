@@ -33,3 +33,80 @@
     max-width: 900px;
     margin: 0 auto;
 }
+
+
+/* # DESKTOP FIRST */
+
+/* img {
+    border: 1px solid red;
+    margin-right: 1rem;
+}
+
+main {
+    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+} */
+
+/*  § Al più 780px
+    § Da 0 a 780px
+*/
+/* @media screen and (max-width: 780px){
+    main{
+        flex-wrap: wrap;
+    }
+
+    img{
+        margin-bottom: 1rem;
+        width: calc(50% - 2rem);
+    }
+} */
+
+/*  § Al più 568px
+    § Da 0 a 568px
+*/
+/* @media screen and (max-width: 568px){
+    main{
+        padding: 2rem;
+    }
+
+    img{
+        width: 100%;
+    }
+} */
+
+/* # MOBILE FIRST */
+
+main{
+    flex-direction: column;
+    padding: 2rem;
+}
+
+img{
+    width: 100%;
+    border: 2px solid red;
+    margin-bottom: 1rem;
+}
+
+/* ? Almeno 580px
+    ? Da 580px in su     */
+@media screen and (min-width: 580px) {
+    main{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img{
+        width: calc(50% - 2rem);
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (min-width:780px){
+    main{
+        flex-wrap: nowrap;
+    }
+}
